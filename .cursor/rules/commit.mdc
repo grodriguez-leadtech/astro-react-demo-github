@@ -1,5 +1,5 @@
 ---
-alwaysApply: true
+alwaysApply: false
 ---
 When generating commit messages, strictly follow these 6 steps required by the Conventional Commits extension:
 
