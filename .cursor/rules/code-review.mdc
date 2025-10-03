@@ -1,0 +1,70 @@
+---
+description: |
+  Code Review Checklist para proyectos Astro/React y Grav.
+  Evalúa estilo, calidad, rendimiento, seguridad, accesibilidad y mantenibilidad.
+globs: []
+applyManually: true
+---
+
+# Code Review Checklist – Astro/React & Grav
+
+## Objetivo
+Revisar el código y proporcionar feedback constructivo siguiendo las mejores prácticas.  
+Detectar posibles problemas de **rendimiento, seguridad, accesibilidad y mantenibilidad** en proyectos **Astro/React** y **Grav**.
+
+---
+
+## Pasos
+1. Analiza el código seleccionado (JSX, Astro, PHP, Twig, YAML).  
+2. Evalúa según los criterios de la checklist.  
+3. Propón mejoras específicas y, si es posible, ejemplos de corrección.  
+4. Marca cualquier red flag de seguridad, performance o mal uso de dependencias/configuración.  
+
+---
+
+## Checklist de Revisión
+
+### Estilo y legibilidad
+- [ ] ¿El código sigue las convenciones del proyecto (Astro/React/Grav)?  
+- [ ] ¿Se usan nombres de variables, funciones y archivos claros y consistentes?  
+- [ ] ¿Se evita código duplicado innecesario?  
+- [ ] ¿Las plantillas Twig y los archivos YAML mantienen coherencia en formato e indentación?  
+
+### Correctitud y calidad
+- [ ] ¿El código hace lo que se espera según los requisitos?  
+- [ ] ¿Existen casos límite no cubiertos?  
+- [ ] ¿Hay errores de lógica o inconsistencias en funciones, componentes o plantillas?  
+- [ ] ¿Las rutas, includes y referencias en Grav están correctamente resueltas?  
+
+### Rendimiento
+- [ ] **Astro/React**: ¿Se evita el render innecesario en componentes?  
+- [ ] **React**: ¿Se usan correctamente hooks como `useMemo` o `useCallback` cuando hace falta?  
+- [ ] **Grav**: ¿Se aprovecha la caché de Grav y se minimizan llamadas redundantes a Twig/PHP?  
+- [ ] ¿Las dependencias externas (npm, plugins Grav) son realmente necesarias?  
+- [ ] ¿Se optimizan assets (CSS, JS, imágenes) y se respeta lazy-loading?  
+
+### Seguridad
+- [ ] ¿No se exponen claves ni información sensible en el código (API keys, configs)?  
+- [ ] ¿Se validan y escapan correctamente los datos de entrada/salida (PHP/Twig/JSX)?  
+- [ ] ¿Se evita inyectar datos de usuario sin sanitización?  
+- [ ] ¿Las dependencias usadas están mantenidas y sin vulnerabilidades conocidas?  
+
+### Accesibilidad (a11y)
+- [ ] ¿Los elementos interactivos tienen etiquetas accesibles (`aria-*`, `alt`)?  
+- [ ] ¿La semántica HTML es correcta (`<button>`, `<header>`, `<main>`, `aria-labels`)?  
+- [ ] **Astro/React**: ¿Los formularios y componentes son navegables vía teclado?  
+- [ ] **Grav**: ¿Las plantillas Twig usan etiquetas semánticas y buenas prácticas de HTML5?  
+- [ ] ¿El contraste de color y tamaño de fuente son adecuados?  
+
+### Testing y mantenibilidad
+- [ ] ¿El código está cubierto por tests (unitarios, integración o funcionales)?  
+- [ ] ¿Se documenta lo suficiente (comentarios, README, JSDoc, docs de Twig)?  
+- [ ] ¿El código/plantillas son modulares y fáciles de mantener?  
+- [ ] ¿Las configuraciones YAML están bien estructuradas y documentadas?  
+
+---
+
+## Output esperado
+- Una lista con ✅ / ❌ en cada categoría.  
+- Sugerencias de mejora con ejemplos prácticos (en JS/TS, PHP/Twig o YAML).  
+- Resumen final con prioridad: **Alta**, **Media**, **Baja**.  

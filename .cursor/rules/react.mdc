@@ -1,0 +1,12 @@
+---
+description: "Buenas prácticas específicas en React"
+globs:
+alwaysApply: true
+---
+# React Rules
+
+- Mantener componentes React en `src/components/`.
+- Añadir `PropTypes` para validar props en cada componente.
+- Hooks: usa `useState` y `useEffect` en la mínima lógica necesaria.
+- Usa fragmentos `<> </>` en lugar de divs innecesarios.
+- Siempre exportar componentes como `default` salvo utilidades.

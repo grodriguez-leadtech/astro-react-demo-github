@@ -1,0 +1,16 @@
+---
+description: "Buenas prácticas específicas de Astro"
+globs:
+alwaysApply: true
+---
+# Astro Rules
+
+- Siempre usar componentes `.astro` para layout y páginas principales.
+- Evita lógica compleja en `.astro`: mover a componentes React o utils.
+- Importa imágenes usando el `Astro.assets` pipeline cuando sea posible.
+- Define `head` en cada página con `title` y `meta description`.
+- Mantén el CSS dentro de `<style>` scoped o usa Tailwind.
+
+# Accessibility
+- Usa etiquetas semánticas (`<main>`, `<header>`, `<footer>`).
+- Asegúrate de que todos los `<img>` tengan `alt`.

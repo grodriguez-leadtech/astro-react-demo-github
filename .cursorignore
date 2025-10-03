@@ -1,0 +1,80 @@
+# Add directories or file patterns to ignore during indexing (e.g. foo/ or *.csv)
+# ================================
+# Ignorar dependencias
+# ================================
+node_modules/
+.pnp/
+.pnp.js
+.pnp.cjs
+.pnpm-debug.log
+
+# Astro & React builds
+.next/
+out/
+dist/
+.build/
+.cache/
+.vercel/
+.vite/
+.astro/
+
+# Grav cache y logs
+cache/
+logs/
+backup/
+tmp/
+assets/
+images/
+
+# ================================
+# Archivos sensibles
+# ================================
+.env
+.env.*
+.env.local
+.env.development
+.env.production
+.env.test
+.envrc
+*.key
+*.pem
+
+# Claves y certificados
+certs/
+secrets/
+private/
+
+# ================================
+# Configuración de IDE/OS
+# ================================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ================================
+# Archivos de CI/CD o pipelines
+# ================================
+*.lock
+yarn.lock
+package-lock.json
+composer.lock
+.bitbucket/
+.github/
+.gitlab/
+
+# ================================
+# Grav específico
+# ================================
+user/accounts/        # usuarios admin
+user/data/            # datos sensibles
+user/config/security.yaml
+user/config/system.yaml
+user/config/plugins/*.yaml
+
+# ================================
+# Otros
+# ================================
+*.log
+*.bak
+*.tmp

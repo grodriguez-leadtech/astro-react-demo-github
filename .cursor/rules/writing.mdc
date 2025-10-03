@@ -1,0 +1,17 @@
+---
+description: "Evitar patrones de escritura poco claros"
+globs:
+alwaysApply: true
+---
+# Writing & Prompting Rules
+
+- Usa comentarios claros y concisos en inglés.
+- Evita frases de relleno como “In today’s world…” o “Let’s dive in”.
+- No uses expresiones vagas: reemplaza *might* / *maybe* por afirmaciones concretas cuando se pueda.
+- Prefiere listas numeradas en lugar de párrafos largos.
+- Siempre añade un bloque de ejemplo cuando expliques un concepto.
+
+# Prompting conventions
+- Indica siempre contexto del archivo (`Estoy en src/pages/index.astro`).
+- Especifica formato esperado: (“genera función”, “explica con comentarios”, “escribe tests”).
+- Guarda los mejores prompts en @notepad para compartir con el equipo.

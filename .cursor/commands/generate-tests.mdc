@@ -1,0 +1,12 @@
+---
+description: "Regals para generar Tests"
+globs:
+alwaysApply: true
+---
+# Command: Generate Jest test
+
+description: Genera un test unitario para el archivo actual con Jest.
+prompt: |
+  Eres un desarrollador senior. Escribe un test unitario con Jest
+  para el siguiente archivo: {{file}}.
+

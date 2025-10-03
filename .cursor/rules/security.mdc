@@ -1,0 +1,15 @@
+---
+description: "Reglas de seguridad"
+globs:
+alwaysApply: true
+---
+# Security Rules
+
+- Nunca incluir credenciales, API keys ni secretos en prompts.
+- No subir código con datos sensibles de usuarios/clientes.
+- Usa `.cursorignore` para excluir:
+  - `.env*`
+  - `node_modules/`
+  - `dist/`
+  - `secrets/`
+- Si necesitas ayuda con lógica sensible, redacta la estructura, no el contenido real.

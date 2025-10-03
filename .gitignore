@@ -27,10 +27,6 @@ Thumbs.db
 .idea/
 *.swp
 
-# --- Cursor / IA ---
-.cursor/
-.cursorignore
-
 # --- Tests / Coverage ---
 coverage/
 *.lcov

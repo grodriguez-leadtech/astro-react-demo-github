@@ -1,0 +1,55 @@
+---
+alwaysApply: true
+---
+When generating commit messages, strictly follow these 6 steps required by the Conventional Commits extension:
+
+### Step 1: Type of change
+- If no type is specified, always default to `feat`.
+- If the user provides a specific type (fix, docs, chore, etc.), use that.
+
+### Step 2: Scope
+- Always skip the scope. Do not write "None" or anything else.
+
+### Step 3: Emoji
+- Select the most appropriate emoji for the change from the table below.
+- Always include the emoji immediately after the type.
+
+### Step 4: Short description
+- Always use the **current branch name** as the short description.
+- Do not modify, rephrase, or shorten it.
+- Keep it exactly as it appears in Git.
+
+### Step 5: Long description
+- Provide a clear description of what was done in this commit.
+- Use plain English (or the project’s default language).
+- Summarize the key changes in 2–3 sentences max.
+
+### Step 6: Footer
+- Leave this completely blank and continue.
+- Do not insert anything here.
+
+---
+
+### Emoji mapping table
+
+| **Type**   | **Emoji** | **Meaning** |
+|------------|-----------|-------------|
+| **feat**   | ✨        | New feature |
+| **fix**    | 🐛        | Bug fix |
+| **docs**   | 📝        | Documentation changes |
+| **style**  | 🎨        | Code style changes (formatting, semicolons, spacing) |
+| **refactor** | ♻️     | Code refactoring (no new features, no bug fixes) |
+| **perf**   | ⚡        | Performance improvements |
+| **test**   | ✅        | Adding or updating tests |
+| **chore**  | 🔧        | Maintenance tasks, build scripts, configs |
+| **ci**     | 🤖        | CI/CD pipeline changes |
+| **build**  | 📦        | Build system or external dependencies |
+| **revert** | ⏪        | Reverting changes |
+
+---
+
+### Example output
+feat: ✨ VISAS-1234-add-todo
+
+1.- Added TodoList component and basic state management.
+2.- Created service layer for API calls.
