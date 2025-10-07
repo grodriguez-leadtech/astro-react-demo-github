@@ -3,14 +3,120 @@ import Counter from "../components/Counter.jsx";
 import TodoList from "../components/TodoList.jsx";
 ---
 
-<html lang="en">
+<html lang="es">
   <head>
-    <title>Astro + React Demo</title>
-    <meta name="description" content="Un pequeño proyecto de ejemplo para probar Cursor con Astro y React." />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro + React Demo - Gestor de Tareas Inteligente</title>
+    <meta name="description" content="Demo de Astro con React que incluye contador interactivo y gestor de tareas con diseño moderno y accesible." />
+    <meta name="keywords" content="Astro, React, Todo List, Counter, Demo, Cursor AI" />
+    <meta name="author" content="Astro React Demo" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Astro + React Demo - Gestor de Tareas" />
+    <meta property="og:description" content="Demo de Astro con React que incluye contador interactivo y gestor de tareas con diseño moderno y accesible." />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="Astro + React Demo - Gestor de Tareas" />
+    <meta property="twitter:description" content="Demo de Astro con React que incluye contador interactivo y gestor de tareas con diseño moderno y accesible." />
   </head>
   <body>
-    <h1>🚀 Astro + React + Cursor</h1>
-    <Counter />
-    <TodoList />
+    <header>
+      <h1>🚀 Astro + React + Cursor</h1>
+      <p>Demo interactivo de componentes React en Astro</p>
+    </header>
+    
+    <main>
+      <section aria-labelledby="counter-section">
+        <h2 id="counter-section" class="sr-only">Contador Interactivo</h2>
+        <Counter client:load />
+      </section>
+      
+      <section aria-labelledby="todo-section">
+        <h2 id="todo-section" class="sr-only">Gestor de Tareas</h2>
+        <TodoList client:load />
+      </section>
+    </main>
+    
+    <footer>
+      <p>&copy; 2024 Astro + React Demo. Proyecto de demostración.</p>
+    </footer>
   </body>
 </html>
+
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  header h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.5rem;
+  }
+  
+  header p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 1.1rem;
+  }
+  
+  main {
+    flex: 1;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  footer {
+    background: #f8f9fa;
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid #e9ecef;
+    margin-top: auto;
+  }
+  
+  footer p {
+    margin: 0;
+    color: #6c757d;
+  }
+  
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2rem;
+    }
+    
+    main {
+      padding: 1rem;
+    }
+  }
+</style>
