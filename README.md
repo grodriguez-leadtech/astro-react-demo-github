@@ -6,32 +6,33 @@ Un proyecto de demostración que combina **Astro** con **React** para crear una 
 
 - ⚡ **Astro** como framework principal para un rendimiento óptimo
 - ⚛️ **React** para componentes interactivos
-- 🎯 **Componentes incluidos:**
-  - Contador interactivo con botones de incremento/decremento
-  - Gestor de tareas completo con funcionalidades de añadir/eliminar
-- 🧪 **Testing** configurado con Jest y React Testing Library
-- 🎨 **Diseño moderno** con estilos CSS y gradientes
+- 🎨 **Tailwind CSS** para estilos modernos y responsivos
+- 🧪 **Jest** para testing
+- 📱 **Diseño responsivo** y accesible
+- 🎯 **Componentes funcionales**:
+  - Contador interactivo
+  - Gestor de tareas con funcionalidades completas
 
 ## 🛠️ Tecnologías Utilizadas
 
-- [Astro](https://astro.build/) - Framework web moderno
-- [React](https://reactjs.org/) - Biblioteca de interfaz de usuario
-- [Jest](https://jestjs.io/) - Framework de testing
-- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) - Utilidades de testing para React
+- **Astro** ^4.0.0 - Framework web moderno
+- **React** ^18.2.0 - Biblioteca de UI
+- **Jest** ^29.0.0 - Framework de testing
+- **Babel** - Transpilador de JavaScript
+- **Tailwind CSS** - Framework de CSS utility-first
 
 ## 📦 Instalación
 
 ### Prerrequisitos
 
-Asegúrate de tener instalado:
-- [Node.js](https://nodejs.org/) (versión 18 o superior)
-- [npm](https://www.npmjs.com/) o [yarn](https://yarnpkg.com/)
+- **Node.js** (versión 18 o superior)
+- **npm** o **yarn**
 
 ### Pasos de instalación
 
 1. **Clona el repositorio:**
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
+   git clone https://github.com/grodriguez-leadtech/astro-react-demo-github.git
    cd astro-react-demo-github
    ```
 
@@ -54,7 +55,7 @@ Asegúrate de tener instalado:
 | `npm run dev` | Inicia el servidor de desarrollo |
 | `npm run build` | Construye la aplicación para producción |
 | `npm run preview` | Previsualiza la build de producción |
-| `npm test` | Ejecuta los tests |
+| `npm test` | Ejecuta los tests con Jest |
 
 ## 📁 Estructura del Proyecto
 
@@ -63,21 +64,37 @@ astro-react-demo-github/
 ├── src/
 │   ├── components/          # Componentes React
 │   │   ├── Counter.jsx     # Componente contador
-│   │   └── TodoList.jsx    # Componente gestor de tareas
+│   │   └── TodoList.jsx    # Gestor de tareas
 │   ├── lib/                # Utilidades
 │   │   └── math.js         # Funciones matemáticas
-│   └── pages/              # Páginas de Astro
-│       └── index.astro     # Página principal
-├── __tests__/              # Tests
-│   ├── Counter.test.jsx    # Tests del contador
-│   └── math.test.js        # Tests de utilidades
-├── astro.config.mjs        # Configuración de Astro
-└── package.json            # Dependencias y scripts
+│   ├── pages/              # Páginas Astro
+│   │   └── index.astro     # Página principal
+│   └── env.d.ts           # Tipos de entorno
+├── __tests__/             # Tests
+│   ├── Counter.test.jsx   # Tests del contador
+│   └── math.test.js       # Tests de utilidades
+├── astro.config.mjs       # Configuración de Astro
+└── package.json           # Dependencias y scripts
 ```
+
+## 🎯 Funcionalidades
+
+### Contador Interactivo
+- Incremento y decremento de valores
+- Estado persistente durante la sesión
+- Interfaz intuitiva con emojis
+
+### Gestor de Tareas
+- ✅ Añadir nuevas tareas
+- ❌ Eliminar tareas existentes
+- 📊 Contador de tareas pendientes
+- ⌨️ Soporte para tecla Enter
+- 🎨 Diseño moderno con gradientes
+- ♿ Accesibilidad completa
 
 ## 🧪 Testing
 
-El proyecto incluye tests para los componentes principales:
+El proyecto incluye tests unitarios para los componentes principales:
 
 ```bash
 # Ejecutar todos los tests
@@ -87,30 +104,14 @@ npm test
 npm test -- --watch
 ```
 
-### Tests incluidos:
-- **Counter.test.jsx**: Tests para el componente contador
-- **math.test.js**: Tests para las funciones matemáticas
+## 🏗️ Desarrollo
 
-## 🎯 Funcionalidades
+### Configuración de Astro
 
-### Contador
-- Botones para incrementar y decrementar
-- Estado persistente durante la sesión
-- Interfaz simple y clara
-
-### Gestor de Tareas
-- Añadir nuevas tareas
-- Eliminar tareas existentes
-- Interfaz moderna con gradientes
-- Contador de tareas pendientes
-- Diseño responsive
-
-## 🔧 Configuración
-
-### Astro
-El proyecto está configurado con la integración de React habilitada en `astro.config.mjs`:
+El proyecto está configurado con la integración de React:
 
 ```javascript
+// astro.config.mjs
 import { defineConfig } from 'astro/config';
 import react from "@astrojs/react";
 
@@ -119,33 +120,15 @@ export default defineConfig({
 });
 ```
 
-## 📝 Desarrollo
+### Añadir Nuevos Componentes
 
-### Añadir nuevos componentes
-
-1. Crea tu componente React en `src/components/`
+1. Crea tu componente en `src/components/`
 2. Importa y usa el componente en `src/pages/index.astro`
 3. Añade tests correspondientes en `__tests__/`
 
-### Estructura de un componente
-
-```jsx
-import { useState } from "react";
-
-export default function MiComponente() {
-  const [estado, setEstado] = useState(initialValue);
-  
-  return (
-    <div>
-      {/* Tu JSX aquí */}
-    </div>
-  );
-}
-```
-
 ## 🚀 Despliegue
 
-### Build para producción
+### Build de Producción
 
 ```bash
 npm run build
@@ -153,7 +136,7 @@ npm run build
 
 Los archivos estáticos se generarán en la carpeta `dist/`.
 
-### Previsualizar la build
+### Previsualización
 
 ```bash
 npm run preview
@@ -167,18 +150,18 @@ npm run preview
 4. Push a la rama (`git push origin feature/AmazingFeature`)
 5. Abre un Pull Request
 
-## 📄 Licencia
+## 📝 Licencia
 
-Este proyecto es privado y está destinado para uso interno.
+Este proyecto es privado y está destinado para uso interno de Leadtech.
 
 ## 👥 Autores
 
-- **Guillem Rodriguez** - *Desarrollo inicial* - [guillem.rodriguez@leadtech.com](mailto:guillem.rodriguez@leadtech.com)
+- **Guillem Rodriguez** - *Desarrollo inicial* - [@grodriguez-leadtech](https://github.com/grodriguez-leadtech)
 
 ## 📞 Soporte
 
-Si tienes alguna pregunta o necesitas ayuda, contacta con el equipo de desarrollo.
+Para soporte técnico o preguntas sobre el proyecto, contacta con el equipo de desarrollo.
 
 ---
 
-**Desarrollado con ❤️ usando Astro y React**
+**Desarrollado con ❤️ usando Astro + React**
